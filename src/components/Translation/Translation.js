@@ -18,7 +18,7 @@ export default function Translation({ message }) {
 
     return (
         <div>
-            {translation}
+            {translation.translated}
         </div>
     )
 }
