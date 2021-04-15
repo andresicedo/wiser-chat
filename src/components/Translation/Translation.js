@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-const translate = require('google-translate-api');
+import translate from 'google-translate-api';
 
 export default function Translation({ message }) {
     const [translation, setTranslation] = useState('');
