@@ -5,7 +5,7 @@ export default function Translation({ message }) {
     const [translation, setTranslation] = useState('');
 
     useEffect(() => {
-        translate(translation, { to: 'es' })
+        translate(message, { to: 'es' })
         .then(res => {
             setTranslation(res.text);
         }).catch(err => {
@@ -13,7 +13,6 @@ export default function Translation({ message }) {
         });
     });
     
-
     return (
         <div>
             {translation}
