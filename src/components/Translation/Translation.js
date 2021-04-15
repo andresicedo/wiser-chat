@@ -7,14 +7,10 @@ export default function Translation({ message }) {
     // const message = useSelector((state) => {
     //     return state.message;
     // })
-
     useEffect(() => {
         translate(message, {to: 'es'})
-            .then((res) => res.json())
-            .then((data) => {
-                setTranslation(data.text);
-            });
-    }, [message]);
+        .then((res) => setTranslation(res.text))
+    });
 
     return (
         <div>
