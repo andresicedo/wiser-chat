@@ -9,7 +9,7 @@ export default function Translation({ message }) {
     // })
 
     useEffect(() => {
-        fetch("https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate?source=%7Bsource%7D&target=%7Btarget%7D&input=%7Binput%7D", {
+        fetch("https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate?source=auto&target=Spanish&input=Hello", {
             "method": "GET",
             "headers": {
                 "x-rapidapi-key": "30d05dba14mshcbd9ba2ffdd2fc7p1f0307jsn8b31de4705a3",
@@ -17,7 +17,7 @@ export default function Translation({ message }) {
             }
         })
             .then(response => {
-                console.log(response);
+                setTranslation(response);
             })
             .catch(err => {
                 console.error(err);
