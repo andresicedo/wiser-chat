@@ -5,10 +5,10 @@ import Translation from '../Translation/Translation';
 
 import './TextContainer.css';
 
-const TextContainer = ({ users, message}) => (
+const TextContainer = ({ users, messages, name }) => (
   <div className="textContainer">
     <div>
-      <Translation message={message}/>
+      <Translation messages={messages} name={name}/>
     </div>
     {
       users
@@ -17,9 +17,9 @@ const TextContainer = ({ users, message}) => (
             <h1>People currently chatting:</h1>
             <div className="activeContainer">
               <h2>
-                {users.map(({name}) => (
-                  <div key={name} className="activeItem">
-                    {name}
+                {users.map(({user}) => (
+                  <div key={user} className="activeItem">
+                    {user}
                     <img alt="Online Icon" src={onlineIcon}/>
                   </div>
                 ))}

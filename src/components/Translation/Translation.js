@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function Translation({ message }) {
-    return (
-        <div>
-            {message.translated}
-        </div>
-    )
-}
+const Translation = ({ messages, name }) => (
+    <div>
+        {messages.map((message, i) => 
+            <div key={i}>
+                <div>{message.translated}</div>
+                <div>{name}</div>
+                </div>)}
+    </div>
+)
+
+export default Translation;
