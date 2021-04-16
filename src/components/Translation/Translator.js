@@ -7,7 +7,6 @@ const Translator = ({ messages }) => (
             <div key={i}>
                 <div><Translation message={message}/></div>
                 </div>)}
-        {console.log(messages)}
     </div>
 )
 
