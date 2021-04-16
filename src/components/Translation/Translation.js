@@ -1,10 +1,10 @@
 import React from 'react'
 
 export default function Translation({ message }) {
-    console.log(message.translated)
+    console.log(message.text.translated)
     return (
         <div>
-            {message.translated}
+            {message.text.translated}
         </div>
     )
 }
