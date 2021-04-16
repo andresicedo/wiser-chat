@@ -9,7 +9,7 @@ import './Chat.css';
 import Translation from '../Translation/Translation';
 
 const ENDPOINT = 'https://wiser-chat.herokuapp.com/';
-// const ENDPOINT = 'http://localhost:3000';
+// const ENDPOINT = 'http://localhost:5000';
 let socket;
 
 const Chat = ({ location }) => {

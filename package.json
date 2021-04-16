@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "google-translate-api": "^2.3.0",
+    "http-proxy-middleware": "^1.1.2",
     "node-english-regular-verbs": "^1.0.1",
     "query-string": "^6.8.2",
     "react": "^16.9.0",

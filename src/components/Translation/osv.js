@@ -1,10 +1,10 @@
-let WordPOS = require('wordpos'),
-wordpos = new WordPOS();
+// let WordPOS = require('wordpos'),
+// wordpos = new WordPOS();
 
-let objects = [];
-let subject = [];
-let verb = [];
-let result = [];
+// let objects = [];
+// let subject = [];
+// let verb = [];
+// let result = [];
 
 // function osv(string) {
 //     let words = string.split(" ");
@@ -37,7 +37,7 @@ let result = [];
 //     return osvString;
 // }
 
-wordpos.getPOS('The woman built a strong stone wall', console.log)
+// wordpos.getPOS('The woman built a strong stone wall', console.log)
 
 // console.log(osv('The woman built a strong stone wall'))
 // //The woman [S] built [V] a strong stone wall [O]
