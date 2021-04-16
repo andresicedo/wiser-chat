@@ -5,7 +5,7 @@ export default function Translation({ message: { user, text }, translation: {tra
         <div>
             <div>
                 <h4>Recent message by: {user}</h4>
-                <p>{translation}</p>
+                <p>{translation.translation}</p>
                 <h5>(<i>{text}</i>)</h5>
             </div>
         </div>
