@@ -4,7 +4,7 @@ const Translation = ({ messages }) => (
     <div>
         {messages.map((message, i) => 
             <div key={i}>
-                <div>{message.translated}</div>
+                <div>{message.translated.translated}</div>
                 </div>)}
     </div>
 )
