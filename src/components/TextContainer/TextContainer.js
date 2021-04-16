@@ -5,10 +5,10 @@ import Translator from '../Translation/Translator';
 
 import './TextContainer.css';
 
-const TextContainer = ({ users, messages, translation }) => (
+const TextContainer = ({ users, messages }) => (
   <div className="textContainer">
     <div>
-      <Translator translation={translation} messages={messages}/>
+      <Translator messages={messages}/>
     </div>
     {
       users
