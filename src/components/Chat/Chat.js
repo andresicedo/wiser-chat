@@ -6,7 +6,6 @@ import Messages from '../Messages/Messages';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import './Chat.css';
-import Translation from '../Translation/Translation';
 
 const ENDPOINT = 'https://wiser-chat.herokuapp.com/';
 // const ENDPOINT = 'http://localhost:5000';
