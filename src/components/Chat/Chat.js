@@ -17,6 +17,7 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const [translation, setTranslation] = useState('');
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -41,6 +42,11 @@ const Chat = ({ location }) => {
     socket.on("roomData", ({ users }) => {
       setUsers(users);
     });
+
+    socket.on('translation', translation => {
+      setTranslation(translation)
+    })
+
   }, []);
 
   const sendMessage = (event) => {
@@ -48,6 +54,9 @@ const Chat = ({ location }) => {
 
     if (message) {
       socket.emit('sendMessage', message, () => setMessage(''));
+    }
+    if (translation) {
+      socket.emit('sendTranslation', translation, () => setTranslation(''));
     }
   }
 
@@ -58,7 +67,7 @@ const Chat = ({ location }) => {
         <Messages messages={messages} name={name} />
         <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
       </div>
-        <TextContainer users={users} messages={messages} name={name}/>
+        <TextContainer users={users} messages={messages} name={name} translation={translation}/>
     </div>
   );
 }
