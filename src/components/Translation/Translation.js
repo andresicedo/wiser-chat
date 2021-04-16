@@ -1,13 +1,12 @@
 import React from 'react'
 
-const Translation = ({ messages }) => (
-    <div>
-        {messages.map((message, i) => 
-            <div key={i}>
-                <div>{message.translated}</div>
-                </div>)}
-        {console.log(messages)}
-    </div>
-)
-
-export default Translation;
+export default function Translation({ message: { text, user }}) {
+    return (
+        <div>
+            <div>
+                <h5>Recent message by: {user}</h5>
+                <p>{text.translated}</p>
+            </div>
+        </div>
+    )
+}
