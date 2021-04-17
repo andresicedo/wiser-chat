@@ -7,8 +7,8 @@ import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import './Chat.css';
 
-const ENDPOINT = 'https://wiser-chat.herokuapp.com/';
-// const ENDPOINT = 'http://localhost:5000';
+// const ENDPOINT = 'https://wiser-chat.herokuapp.com/';
+const ENDPOINT = 'http://localhost:5000';
 let socket;
 
 const Chat = ({ location }) => {
@@ -18,13 +18,15 @@ const Chat = ({ location }) => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
 
+
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
     socket = io(ENDPOINT);
 
     setRoom(room);
-    setName(name)
+    setName(name);
+
 
     socket.emit('join', { name, room }, (error) => {
       if (error) {
