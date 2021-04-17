@@ -1,11 +1,11 @@
 import React from 'react'
 import Translation from './Translation';
 
-const Translator = ({ messages }) => (
+const Translator = ({ messages, translation }) => (
     <div>
         {messages.map((message, i) => 
             <div key={i}>
-                <div><Translation message={message}/></div>
+                <div><Translation translation={translation} message={message}/></div>
                 </div>)}
     </div>
 )

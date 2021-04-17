@@ -1,7 +1,7 @@
 import React from 'react'
 import moment from 'moment';
-import translation from '../../../../server/test';
-export default function Translation({ message: { user, text }}) {
+
+export default function Translation({ message: { user, text }}, translation) {
     return (
         <div>
             <div>
