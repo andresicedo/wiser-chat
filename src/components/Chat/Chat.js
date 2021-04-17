@@ -17,7 +17,6 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const [translation, setTranslation] = useState('');
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -44,13 +43,6 @@ const Chat = ({ location }) => {
     });
   }, []);
 
-  const sendTranslation = (event) => {
-    event.preventDefault();
-    if(translation) {
-      socket.emit('sendTranslation', translation, () => setTranslation(''));
-    }
-  }
-
   const sendMessage = (event) => {
     event.preventDefault();
 
@@ -64,9 +56,9 @@ const Chat = ({ location }) => {
       <div className="container">
         <InfoBar room={room} />
         <Messages messages={messages} name={name} />
-        <Input message={message} sendTranslation={sendTranslation} setTranslation={setTranslation} setMessage={setMessage} sendMessage={sendMessage} />
+        <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
       </div>
-        <TextContainer translation={translation} users={users} messages={messages} name={name}/>
+        <TextContainer users={users} messages={messages} name={name}/>
     </div>
   );
 }
