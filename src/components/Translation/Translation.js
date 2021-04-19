@@ -1,13 +1,15 @@
 import React from 'react'
 import moment from 'moment';
+import './Translation.css'
 
 export default function Translation({ message: { user, text, translation }}) {
     return (
         <div>
-            <div>
-                <h4>Most recent message: {user} {moment().fromNow()}</h4>
-                <h5>{translation}</h5>
-                <h5>(<i>{text}</i>)</h5>
+            <div className="translateContainer">
+                <div className="recentMessage">Most recent message: 
+                    <div className="recentUser">{user}</div> {moment().calendar()}</div>
+                <div className="translatedMessage">{translation}</div>
+                <div>(<i>{text}</i>)</div>
             </div>
         </div>
     )

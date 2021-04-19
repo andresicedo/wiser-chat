@@ -16,6 +16,17 @@
   width: 35%;
 }
 
+.rightContainer {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.leftContainer {
+  margin-left: -10%;
+  height: 60%;
+  overflow-y: scroll;
+}
+
 * {
   box-sizing: border-box;
 }

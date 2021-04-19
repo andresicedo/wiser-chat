@@ -1,0 +1,18 @@
+.recentMessage {
+    font-size: 10px;
+}
+
+.recentUser {
+    font-size: 20px;
+}
+
+.translatedMessage {
+    font-size: 45px;
+    
+}
+
+.translateContainer {
+    margin-top: 1%;
+    border-bottom: 2px solid white;
+}
+
