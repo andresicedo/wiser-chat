@@ -7,9 +7,13 @@ import Languages from './Languages';
 export default function SignIn() {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
-  const [language, setLanguage] = useState('en');
+
 
   return (
+    <div>
+      <div className="header">
+      <h1>Wiser-Chat</h1>
+    </div>
     <div className="joinOuterContainer">
       <div className="joinInnerContainer">
         <h1 className="heading">Join</h1>
@@ -20,12 +24,13 @@ export default function SignIn() {
           <input placeholder="Room" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
         </div>
         <div>
-          <Languages setLanguage={setLanguage}/>
+          <Languages />
         </div>
-        <Link onClick={e => (!name || !room || !language) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
+        <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
           <button className={'button mt-20'} type="submit">Sign In</button>
         </Link>
       </div>
+    </div>
     </div>
   );
 }

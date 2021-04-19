@@ -6,9 +6,10 @@ import Messages from '../Messages/Messages';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import './Chat.css';
+import Translator from '../Translation/Translator';
 
-// const ENDPOINT = 'https://wiser-chat.herokuapp.com/';
-const ENDPOINT = 'http://localhost:5000';
+const ENDPOINT = 'https://wiser-chat.herokuapp.com/';
+// const ENDPOINT = 'http://localhost:5000';
 let socket;
 
 const Chat = ({ location }) => {
@@ -47,20 +48,29 @@ const Chat = ({ location }) => {
 
   const sendMessage = (event) => {
     event.preventDefault();
-
     if (message) {
       socket.emit('sendMessage', message, () => setMessage(''));
     }
   }
 
   return (
+    <div className="row">
     <div className="outerContainer">
-      <div className="container">
+      <div className="leftContainer col-3 col-s-3 menu">
+      <TextContainer users={users}/>
+      </div>
+      <div className="container col-6 col-s-9 ">
         <InfoBar room={room} />
         <Messages messages={messages} name={name} />
         <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
       </div>
-        <TextContainer users={users} messages={messages} name={name}/>
+      <div className="rightContainer col-3 col-s-12">
+        <div className="aside">
+          <Translator messages={messages}/>
+        </div>
+      
+      </div>
+    </div>
     </div>
   );
 }

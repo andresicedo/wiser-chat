@@ -1,14 +1,11 @@
 import React from 'react';
-
 import onlineIcon from '../../icons/onlineIcon.png';
-import Translator from '../Translation/Translator';
 
 import './TextContainer.css';
 
-const TextContainer = ({ users, messages }) => (
+const TextContainer = ({ users }) => (
   <div className="textContainer">
     <div>
-      <Translator messages={messages}/>
     </div>
     {
       users
