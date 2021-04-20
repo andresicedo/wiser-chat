@@ -1,80 +1,118 @@
 # Wiser-Chat
-> This is a realtime chat application that uses React on the front end, with NodeJS and Socket.io web socket library on the back end. The project also uses the Google Cloud Translation Api for a realtime translation of the current chatroom. 
+
+![Project Image](src/icons/home.png)
+
+> This is a realtime chat application that uses React on the front end, with Express JS, NodeJS and Socket.io web socket library on the back end. The project also uses the Google Cloud Translation Api for a realtime translation of the current chatroom. 
+
+---
+
+### Table of Contents
+
+- [Description](#description)
+- [How To Use](#how-to-use)
+- [References](#references)
+- [License](#license)
+- [Author Info](#author-info)
+
+---
+
+## Description
+
+In this application, your able to create a username, chatroom and translation language of choice. This is great application for sending messages to people who don't speak or write in the same language as you. On your end, you'll be able to translate a message the language of your choice, type in your language of choice and send. The receiving user will be able to translate your message and continue chatting with everyone in the chatroom without having to stop to understand what a user is trying to say.
 
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+### Technologies
 
-In this application, your able to create a username, chatroom and translation language of choice. This is great application for sending messages to people who don't speak or write in the same language as you. On your end, you'll be able to translate a message the language of your choice, type in your language of choice and send. The receiving user will be able to translate your message and continue chatting with everyone in the chatroom without having to stop to understand what a user is trying to say. 
+- Node JS
+- React JS
+- Express JS
+- Socket.io
+- [Google Cloud Translation API](https://cloud.google.com/translate)
+- [Netlify - FrontEnd Deployment](https://www.netlify.com/)
+- [Heroku - BackEnd Deployment](https://www.heroku.com/home)
 
-![](header.png)
+[Back To The Top](#Wiser-Chat)
+
+---
+
+## How To Use
+
+- On the homepage, join a chat with a username, chat name and language translation (English will generate in translation if no language is set).
+- Join!
+- Ensure the other users you want to chat with enter the same chat name and begin to chat!
+
 
 ## Installation
 
 
-OS X & Linux:
+OS:
 
+- Front End - client directory
 ```sh
-npm install my-crazy-module --save
+npx create-react-app [appName]
+npm i --save react-router 
+npm i react-router-dom 
+npm i socket.io-client 
+npm i moment --save
+npm i react-scroll-to-bottom 
+npm i react-emoji 
+npm i query-string
+```
+- Back End - server directory
+```sh
+npm i cors
+npm i nodemon
+npm i express
+npm i socket.io
+npm i --save
 ```
 
-Windows:
+#### API Reference
+
+[Google Cloud Translate](https://www.npmjs.com/package/@google-cloud/translate)
 
 ```sh
-edit autoexec.bat
+npm i @google-cloud/translate
 ```
 
-## Usage example
+[Back To The Top](#Wise-Chat)
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+## References
 
-## Development setup
+[Build and Deploy a Realtime Chat Application](https://www.youtube.com/watch?v=ZwFA3YMfkoc)
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+[Google Cloud Translate API with NodeJS](https://www.youtube.com/watch?v=Sjl9ilOpHG8&t=581s)
 
-```sh
-make install
-npm test
-```
+## License
 
-## Release History
+MIT License
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## Meta
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+[Back To The Top](#Wiser-Chat)
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+## Author Info
 
-## Contributing
+- Website - [AndresIcedo.com](https://AndresIcedo.com/)
+- LinkedIn - [andres-icedo](linkedin.com/in/andres-icedo)
+- GitHub - [andresicedo](https://github.com/andresicedo)
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
 
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+[Back To The Top](#Wiser-Chat)
