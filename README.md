@@ -111,7 +111,7 @@ SOFTWARE.
 ## Author Info
 
 - Website - [AndresIcedo.com](https://AndresIcedo.com/)
-- LinkedIn - [andres-icedo](linkedin.com/in/andres-icedo)
+- LinkedIn - [andres-icedo](https://www.linkedin.com/in/andres-icedo/)
 - GitHub - [andresicedo](https://github.com/andresicedo)
 
 
