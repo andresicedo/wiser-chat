@@ -12,24 +12,27 @@ import Translator from '../Translation/Translator';
 const ENDPOINT = process.env.REACT_APP_ENDPOINT || 'http://localhost:5000';
 let socket;
 
+
 const Chat = ({ location }) => {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const [chosenLanguage, setChosenLanguage] = useState('');
 
 
   useEffect(() => {
-    const { name, room } = queryString.parse(location.search);
+    const { name, room, chosenLanguage } = queryString.parse(location.search);
 
     socket = io(ENDPOINT);
 
     setRoom(room);
     setName(name);
+    setChosenLanguage(chosenLanguage);
 
 
-    socket.emit('join', { name, room }, (error) => {
+    socket.emit('join', { name, room, chosenLanguage }, (error) => {
       if (error) {
         alert(error);
       }
@@ -49,7 +52,7 @@ const Chat = ({ location }) => {
   const sendMessage = (event) => {
     event.preventDefault();
     if (message) {
-      socket.emit('sendMessage', message, () => setMessage(''));
+      socket.emit('sendMessage', {message, chosenLanguage}, () => setMessage(''));
     }
   }
 

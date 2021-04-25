@@ -116,15 +116,15 @@ let languagesDictionary = {
 
 let languages = Object.keys(languagesDictionary);
 
-export default function Languages() {
+export default function Languages({setChosenLanguage}) {
   let ISO_639_1_Code = languagesDictionary.language;
   return (
     <div className="mt-20">
-      <select>
-        <option disabled>Select Translation Language</option>
+      <select onChange={(event) => setChosenLanguage(event.target.value)}>
+        <option disabled >Select Translation Language</option>
         {languages.map((language) => {
           return (
-            <option value={ISO_639_1_Code} key={languages.indexOf(language)}>{language}</option>
+            <option value={ISO_639_1_Code} key={language}>{language}</option>
           )
         })}
       </select>
